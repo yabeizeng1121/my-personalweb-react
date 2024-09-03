@@ -302,3 +302,20 @@
     font-size: 1.5em;
     line-height: 1;
 }
+
+.read-more-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 4px;
+  border-color: white;
+  box-shadow: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.read-more-button:hover {
+  background-color: #a88370;
+}
