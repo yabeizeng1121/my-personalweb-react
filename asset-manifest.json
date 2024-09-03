@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/my-personalweb-react/static/css/main.07e61d14.css",
-    "main.js": "/my-personalweb-react/static/js/main.19bca1eb.js",
+    "main.css": "/my-personalweb-react/static/css/main.e54591e6.css",
+    "main.js": "/my-personalweb-react/static/js/main.128b0086.js",
     "static/media/HomeIcon.png": "/my-personalweb-react/static/media/HomeIcon.55c45bb5d0c995cabb9d.png",
     "index.html": "/my-personalweb-react/index.html",
-    "main.07e61d14.css.map": "/my-personalweb-react/static/css/main.07e61d14.css.map",
-    "main.19bca1eb.js.map": "/my-personalweb-react/static/js/main.19bca1eb.js.map"
+    "main.e54591e6.css.map": "/my-personalweb-react/static/css/main.e54591e6.css.map",
+    "main.128b0086.js.map": "/my-personalweb-react/static/js/main.128b0086.js.map"
   },
   "entrypoints": [
-    "static/css/main.07e61d14.css",
-    "static/js/main.19bca1eb.js"
+    "static/css/main.e54591e6.css",
+    "static/js/main.128b0086.js"
   ]
 }
