@@ -1,0 +1,152 @@
+/* Carousel.css */
+.carousel {
+    position: relative;
+    width: 300px; /* Adjust this size according to your needs */
+    height: 400px; /* Increased height for images */
+    perspective: 500px;
+    transform-style: preserve-3d;
+    margin: auto;
+  }
+  
+  .cardly-container {
+    position: absolute;
+    margin-left: -50%;
+    width: 100%;
+    height: 100%;
+    transform: 
+      rotateY(calc(var(--offset) * 50deg)) 
+      scaleY(calc(1 + var(--abs-offset) * -0.4))
+      translateZ(calc(var(--abs-offset) * -30rem))
+      translateX(calc(var(--direction) * -5rem));
+    filter: blur(calc(var(--abs-offset) * 1rem));
+    transition: all 0.3s ease-out;
+  }
+  
+  .cardly {
+    width: 200%;
+    height: 100%;
+    padding: 1rem;
+    background-color: linear-gradient(135deg, #FF6F61, #FFD700);;
+    border-radius: 1rem;
+    color: #190101;
+    text-align: center; /* Center-align text */
+    transition: all 0.3s ease-out;
+  }
+  
+  .cardly-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .cardly h2 {
+    margin-top: 1rem;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .cardly-nav {
+    color: rgb(124, 123, 122);
+    font-size: 5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    z-index: 2;
+    cursor: none;
+    user-select: none;
+    background: unset;
+    border: unset;
+  }
+  
+  .cardly-nav.left {
+    transform: translateX(-250%) translateY(-50%);
+  }
+  
+  .cardly-nav.right {
+    right: 0;
+    transform: translateX(250%) translateY(-50%);
+  }
+  
+
+  /* Media Queries */
+
+/* Medium screens (Tablets, 992px and below) */
+@media (max-width: 992px) {
+    .carousel {
+        width: 250px;
+        height: 350px;
+    }
+
+    .cardly {
+        width: 150%;
+        height: 100%;
+    }
+
+    .cardly-nav {
+        font-size: 4rem;
+    }
+
+    .cardly-nav.left {
+        transform: translateX(-200%) translateY(-50%);
+    }
+
+    .cardly-nav.right {
+        transform: translateX(200%) translateY(-50%);
+    }
+}
+
+/* Small screens (Mobile devices, 768px and below) */
+@media (max-width: 768px) {
+    .carousel {
+        width: 220px;
+        height: 300px;
+    }
+
+    .cardly {
+        width: 150%;
+        height: 100%;
+    }
+
+    .cardly-nav {
+        font-size: 3.5rem;
+    }
+
+    .cardly-nav.left {
+        transform: translateX(-180%) translateY(-50%);
+    }
+
+    .cardly-nav.right {
+        transform: translateX(180%) translateY(-50%);
+    }
+}
+
+/* Extra small screens (Small mobile devices, 576px and below) */
+@media (max-width: 576px) {
+    .carousel {
+        width: 180px;
+        height: 250px;
+    }
+
+    .cardly {
+        width: 130%;
+        height: 100%;
+    }
+
+    .cardly-nav {
+        font-size: 3rem;
+    }
+
+    .cardly-nav.left {
+        transform: translateX(-160%) translateY(-50%);
+    }
+
+    .cardly-nav.right {
+        transform: translateX(160%) translateY(-50%);
+    }
+
+    .cardly h2 {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+}

@@ -1,0 +1,19 @@
+.home-icon {
+    cursor:None;
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .home-icon img {
+    width: 40px; /* Adjust the size of the home icon image */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .home-icon img:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+  }
+  

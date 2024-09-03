@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111; /* 全黑背景 */
+  font-family: 'Gambetta', serif; /* 使用提供的字体 */
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 120px;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: PaleGoldenRod;
+  outline: none;
+  text-align: center;
+  z-index: 3000;
+  opacity: 0;
+  transform: translateY(-50px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.text-entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-exit {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+h1:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: .5px;
+}
+
+
+.app-bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px; /* Adds some padding */
+}
+
+.app-bottom-text p {
+  font-size: small;
 }

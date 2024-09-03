@@ -1,0 +1,367 @@
+/* Skills.css */
+.skills-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Non-scrollable */
+    background-color: #1f1f2e; /* Dark background */
+    color: #ffffff; /* Text color */
+    font-family: 'Arial', sans-serif;
+}
+
+.skill-dashboard-container {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: calc(100% - 7%); /* Adjust height to be 100% minus the 7% top padding */
+    padding-top: 7%; /* Padding from the top */
+    background-color: #1f1f2e; /* Consistent background color */
+}
+
+/* Sidebar (Navigation Panel) */
+.nav-panel {
+    width: 15%; /* Fixed width for the sidebar */
+    padding: 20px;
+    background-color: #2a2a3c; /* Darker background for the sidebar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #2a2a3c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.nav-header {
+    font-size: 18px;
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #3a3a4c;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ff6f61; /* Hover color for buttons */
+}
+
+/* Dashboard Content Area */
+.dashboard-content {
+    display: flex;
+    width: 85%; /* Adjusted width to account for padding and sidebar */
+    box-sizing: border-box; /* Ensure padding is included in width */ /* Enable vertical scrolling if content overflows */
+}
+
+.skills-panel {
+    width: 70%; /* Set the width of the skills panel */
+    padding: 20px;
+    height: 100%;
+    background-color: #2a2a3c; /* Background color for the panel */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+.visualizations-container {
+    height: 80%; /* Full height of the parent */
+    background-color: #3a3a4c; /* Background color for the visualizations container */
+    border-radius: 10px;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.visualizations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000; /* Black background to match the theme */
+    border-bottom: 1px solid #2a2a3c; /* Subtle border */
+    border-radius: 10px 10px 0 0;
+}
+
+.visualizations-header h2 {
+    color: #fff; /* White text color */
+    margin: 0;
+    font-size: 18px;
+}
+
+.visualizations-header select {
+    background-color: #2a2a3c; /* Dark background for the dropdown */
+    color: #fff; /* White text color */
+    border: 1px solid #444; /* Darker border */
+    padding: 5px 30px 5px 10px; /* Extra padding on the right for the arrow */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* Remove default focus outline */
+    appearance: none; /* Remove default dropdown arrow */
+    cursor: none; /* Change cursor to indicate interaction */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="12" viewBox="0 0 20 20" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548c.396-.396 1.037-.396 1.433 0L10 10.6l3.051-3.051c.396-.396 1.037-.396 1.433 0s.396 1.037 0 1.433l-3.768 3.768c-.396.396-1.037.396-1.433 0l-3.768-3.768c-.396-.396-.396-1.037 0-1.433z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+}
+
+.visualizations-header select:focus {
+    border-color: #ff6f61; /* Highlight border on focus */
+}
+
+.visualizations-header select option {
+    background-color: #2a2a3c; /* Dark background for options */
+    color: #fff; /* White text for options */
+}
+
+
+/* Third Panel */
+.third-panel {
+    width: 30%; /* Set the width of the third panel */
+    padding: 20px;
+    height: 100%;
+    background-color: #2a2a3c; /* Background color for the panel */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-left: 0%; /* Add some space between the skills panel and the third panel */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: hidden;
+}
+
+.third-panel h2 {
+    color: #fff; /* White text color */
+    font-size: 18px;
+    margin-bottom: 20px;
+} 
+.skill-everything {
+    height:95%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    overflow-y: auto;
+    
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1f1f2e; /* Darker background for input */
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.search-input::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+.search-results {
+    flex-grow: 1; /* Allow the results area to grow and fill available space */
+    background-color: #3a3a4c;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling if results exceed available space */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    padding: auto;
+    gap: 0px;
+    width: 80%;
+}
+
+.skill-levels-description {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2a2a3c;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.skill-levels-description p {
+    margin: 5px 0;
+}
+
+.certification-panel {
+    padding: 20px;
+    background-color: #2a2a3c;
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.certification-cards {
+    width: 100%; /* Full width to match the parent container */
+    max-width: 800px; /* Optional: Set a max width to control the size of the carousel */
+    margin-left: -10%;
+    margin: 0 auto; /* Center the carousel within the parent container */
+    padding: 20px 0; /* Optional: Add some padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #2a2a3c; /* Match the background color with the rest of the panel */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    object-fit: contain;
+}
+
+.certification-panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff; /* White text color */
+}
+
+
+/* Media Queries */
+
+/* Medium screens (Tablets, 992px and below) */
+@media (max-width: 992px) {
+    .skill-dashboard-container {
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+        overflow-y: auto;
+    }
+
+    .nav-panel {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .skills-panel, .third-panel {
+        width: 100%;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .certification-cards {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Single column */
+        gap: 10px;
+    }
+}
+
+/* Small screens (Mobile devices, 768px and below) */
+@media (max-width: 768px) {
+    .skills-container {
+        padding-top: 15%;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .skill-dashboard-container {
+        padding-top: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        flex-direction: column;
+    }
+
+    .nav-panel {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .skills-panel, .third-panel {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    .skills-panel {
+        height: auto;
+    }
+
+    .third-panel {
+        display: block; /* Ensure the third panel is visible */
+        margin-top: 20px; /* Add spacing from the skills panel */
+    }
+
+    .skill-levels-description {
+        font-size: 10px;
+    }
+
+    .certification-cards {
+        padding: 10px 0;
+    }
+
+    .visualizations-header h2 {
+        font-size: 16px;
+    }
+
+    .visualizations-header select {
+        font-size: 14px;
+        padding: 5px 20px 5px 8px;
+    }
+}
+
+/* Extra small screens (Small mobile devices, 576px and below) */
+@media (max-width: 576px) {
+    .nav-panel {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .skills-panel {
+        padding: 8px;
+        width: auto;
+    }
+
+    .visualizations-container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .skill-levels-description {
+        font-size: 9px;
+    }
+
+    .third-panel {
+        display: block; /* Ensure the third panel is visible */
+        margin-top: 15px; /* Add spacing from the skills panel */
+    }
+
+    .certification-cards {
+        padding: 5px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column */
+        width: 100%; /* Full width */
+    }
+}

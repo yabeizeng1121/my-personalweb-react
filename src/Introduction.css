@@ -1,0 +1,175 @@
+.introduction-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  min-height: 3000px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  max-height: 140vh;
+}
+
+.sun {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  max-height: 140vh;
+}
+
+.scrollicon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  max-height: 140vh;
+}
+
+.mountain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+  max-height: 140vh;
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 4;
+  max-height: 140vh;
+}
+
+.tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  max-height: 140vh;
+}
+
+.top-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 6;
+  max-height: 140vh;
+}
+
+
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+.home-icon {
+  position: fixed;
+  cursor: pointer;
+  z-index: 9999; /* 确保在所有元素之上 */
+  max-height: 100vh;
+}
+
+.introduction-text-section {
+  padding-top: 190vh;
+  max-width: 1150px;
+  margin: 0 auto;
+  color: #efd4bdfb;
+  text-align: left;
+}
+
+.introduction-header {
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 0px;
+  width: 50%;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.introduction-header p {
+  text-align: left;
+}
+
+
+.introduction-text-columns {
+  margin-bottom: 30px;
+}
+
+.introduction-column {
+  color: #ede0d5;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: 'Bookman', 'URW Bookman L', serif;
+}
+
+.introduction-column p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.introduction-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction-columns .introduction-column {
+  width: 48%;
+}
+
+
+
+
+
+

@@ -1,0 +1,306 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 13% 0;
+    gap: 20px; /* Add some space between the cards */
+  }
+  
+.card-container .card-box {
+    position: relative;
+    width: 300px; /* Slightly reduce width to fit two cards per row */
+    height: 380px; /* Slightly reduce height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; /* Adjust margin to balance spacing */
+    transition: 0.5s;
+  } 
+  
+.card-container .card-box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: brightness(0.9);
+  }
+  
+  .card-container .card-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+  }
+  
+  .card-container .card-box:hover:before,
+  .card-container .card-box:hover:after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+  }
+  
+  .card-container .card-box:nth-child(1)::before,
+  .card-container .card-box:nth-child(1)::after {
+    background: linear-gradient(135deg, #FFCC33, #F9A825, #D35400, #BF360C); /* First card gradient */
+  }
+  
+  .card-container .card-box:nth-child(2)::before,
+  .card-container .card-box:nth-child(2)::after {
+    background: linear-gradient(135deg, #FFD54F, #FFCC80, #FFB74D, #F57C00); /* Second card gradient */
+  }
+  
+  .card-container .card-box:nth-child(3)::before,
+  .card-container .card-box:nth-child(3)::after {
+    background: linear-gradient(135deg, #8E3B1A, #6D2C13, #5E2B2C, #3E2723); /* Third card gradient */
+  }
+  
+  .card-container .card-box:nth-child(4)::before,
+  .card-container .card-box:nth-child(4)::after {
+    background: linear-gradient(135deg, #D35400, #FF7043, #FF8A65, #BF360C); /* Fourth card gradient */
+  }
+  
+  .card-container .card-box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+  }
+  
+  .card-container .card-box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* For modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-container .card-box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  
+  .card-container .card-box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* For modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    animation-delay: -1s;
+  }
+  
+  .card-container .card-box:hover span:after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  
+  @keyframes animate {
+    0%, 100% {
+      transform: translateY(10px);
+    }
+  
+    50% {
+      transform: translate(-10px);
+    }
+  }
+  
+  .card-container .card-box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* For modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+  .card-container .card-box:hover .content {
+    left: -25px;
+    padding: 60px 40px;
+  }
+  
+  .card-container .card-box .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .card-container .card-box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+  }
+  
+  .card-container .card-box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  
+  .card-container .card-box .content a:hover {
+    background: #ffcf4d;
+    border: 1px solid rgba(255, 0, 88, 0.4);
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+  }
+  
+  /* .card-container .card-box:hover {
+    cursor: url('./eye-cursor.svg'), auto; /* Custom SVG eye cursor */
+   */
+  
+  /* CardSection.css */
+.card-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    gap: 20px;
+  }
+  
+  .card-box {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    transition: 0.5s;
+  }
+  
+  /* Background gradients and hover effects as defined previously */
+  
+  .details-section {
+    margin: 30px auto 0 auto; /* Center the section horizontally with auto margins */
+    position: relative;
+    padding: 20px;
+    height: auto; /* Adjust height automatically based on content */
+    width: 80%; /* Adjust the width to take up a reasonable amount of space */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    color: #fff;
+    transition: opacity 0.1s ease-in-out;
+    opacity: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+  
+  .details-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .details-section p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+
+  .experience-entry {
+    margin-bottom: 40px;
+    margin:40px;
+}
+
+.experience-entry h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #E96525;
+}
+
+.experience-entry h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: #a88370;
+    
+}
+
+.experience-entry .date {
+    font-size: 1em;
+    color: #a88370;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.experience-entry ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-entry ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience-entry ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #E96525;
+    font-size: 1.5em;
+    line-height: 1;
+}

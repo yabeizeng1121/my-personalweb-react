@@ -1,0 +1,245 @@
+.contact-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    padding-left: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Darker overlay for contrast */
+        url('https://imagesforkaya.s3.amazonaws.com/background-contact.png') 
+        no-repeat center center/cover;
+    background-size: 150% 150%;
+    font-family: "Montserrat", sans-serif;
+    color: #E0E0E0; /* Light gray for text to contrast with the dark background */
+}
+
+.contact-profile {
+    animation: contact-loadProfile 0.6s ease-in-out;
+    animation-fill-mode: both;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-height: 950px;
+    max-width: 900px;
+    color: #E0E0E0; /* Consistent light gray for profile text */
+}
+
+.contact-profile-bg {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    border-radius: 10px;
+    background: rgba(64, 64, 64, 0.7); /* Dark gray background with transparency */
+    box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
+    width: calc(100% - 75px);
+    height: calc(100% - 40px);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-social-media-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Add some space above the icons */
+}
+
+.contact-social-media-icons a {
+    font-size: 2rem; /* Larger icon size */
+    color: #E0E0E0; /* Light gray color for icons */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-social-media-icons a:hover {
+    color: #ffffff; /* White color on hover for emphasis */
+    text-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+    transform: scale(1.1)
+}
+
+
+.contact-icon:hover {
+    transform: scale(1.5); /* Slightly increase icon size on hover */
+}
+
+.contact-container-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+}
+
+.contact-profile-image {
+    animation: contact-loadProfileImage 1s ease-in-out 0.5s;
+    animation-fill-mode: both;
+    position: relative;
+    border-radius: 10px;
+    width: 45%;
+    flex: none;
+    background-image: url("https://imagesforkaya.s3.amazonaws.com/temp.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-profile-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0); /* Dark overlay to enhance focus on image */
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+.contact-camera {
+    color: #A0A0A0; /* Subtle gray for camera icon */
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    font-size: 1.3rem;
+}
+
+.contact-profile-info {
+    margin-top: 120px;
+    padding: 8% 8% 2% 8%;
+    position: relative;
+}
+
+.contact-profile-info h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0.7rem;
+    position: absolute;
+    animation-fill-mode: both;
+    color: #C0C0C0; /* Light gray for headings to stand out */
+}
+
+.contact-h1-first-name {
+    animation: contact-titleEffect 1s cubic-bezier(0,0.2,0.4,1);
+    top: -115px;
+    left: -85px;
+} 
+
+.contact-h1-second-name {
+    animation: contact-titleEffect 1s cubic-bezier(0,0,0.3,1);
+    top: -50px;
+    left: -45px;
+}
+
+.contact-profile-info h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-top: 0;
+    margin-bottom: 5%;
+    color: #B0B0B0; /* Softer gray for subheadings */
+}
+
+.contact-profile-info p {
+    line-height: 1.5rem;
+    color: #D0D0D0; /* Light gray for readability */
+}
+
+.contact-icon {
+    background: transparent no-repeat center;
+    background-size: contain;
+    background-origin: content-box;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    border: none;
+    transition: transform 0.5s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(0.9);
+}
+
+.contact-close {
+    background-image: url("https://zephyo.github.io/22Days/code/3/graphics/close.svg");
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    filter: invert(75%); /* Slight inversion to match gray tones */
+}
+
+@media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
+    .contact-profile {
+        margin: 3%;
+        height: 97%;
+    }
+    .contact-container-row {
+        height: 86%;
+        flex-direction: column;
+    }
+    .contact-profile-image {
+        height: 40%;
+        width: calc(100% - 90px);
+    }
+    .contact-profile-bg {
+        width: 100%;
+    }
+    .contact-h1-first-name {
+        left: 10px;
+    }
+    .contact-h1-second-name {
+        left: 60px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 4/7) {
+    .contact-profile {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@keyframes contact-backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes contact-loadProfile {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes contact-loadProfileImage {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes contact-titleEffect {
+    from {
+        opacity: 0;
+        transform: translateX(-75px);
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

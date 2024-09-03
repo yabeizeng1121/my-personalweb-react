@@ -1,17 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Introduction from './Introduction';
+import './index.css';
+import Experience from './Experience';
+import Project from './Project';
+import AnimatedCursor from './AnimatedCursor';
+import Education from './Education'
+import Contact from './Contact'
+import Skills from './Skills'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <Router>
+    <AnimatedCursor /> {/* Add the AnimatedCursor to all pages */}
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/introduction" element={<Introduction />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="/project" element={<Project />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

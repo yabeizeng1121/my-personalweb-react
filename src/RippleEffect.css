@@ -1,0 +1,40 @@
+.ripple-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* 确保 ripple-container 在文字下面 */
+}
+
+.ripple {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transform-origin: center;
+    z-index: -1; /* 确保 ripple 在 container 内的最底层 */
+    transition: opacity 1.5s ease-out; /* Synchronize with the ripple */
+}
+
+.ripple-active {
+    opacity: 1;
+    animation: rippleExpand 1.5s ease-out forwards;
+}
+
+@keyframes rippleExpand {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20); /* Expands to cover the entire screen */
+        opacity: 0; /* Fades out as it expands */
+    }
+}
+
+
